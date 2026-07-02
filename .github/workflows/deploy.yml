@@ -31,7 +31,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --severity-threshold=critical
+          args: --severity-threshold=critical --file=backend/package.json
 
   # Point 2 & 3: Container image scanning + block merge on critical findings
   image-scan:
